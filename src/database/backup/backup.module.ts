@@ -14,6 +14,7 @@ import { BackupCloudStorageService } from './backup-cloud-storage.service';
 import { BackupRecoveryService } from './backup-recovery.service';
 import { BackupNotificationService } from './backup-notification.service';
 import { BackupMetricsService } from './backup-metrics.service';
+import { BackupMonitoringService } from './backup-monitoring.service';
 import { BackupController } from './backup.controller';
 
 import { BackupRecord, BackupSchedule, RecoveryTest } from './entities';
