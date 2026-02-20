@@ -4,6 +4,10 @@ import { HttpModule } from '@nestjs/axios';
 import { ConfigModule } from '@nestjs/config';
 
 import { BackupService } from './backup.service';
+import { EnhancedBackupService } from './enhanced-backup.service';
+import { DisasterRecoveryTestingService } from './disaster-recovery-testing.service';
+import { RecoveryVerificationService } from './recovery-verification.service';
+import { BackupGoogleCloudService } from './backup-google-cloud.service';
 import { BackupSchedulerService } from './backup-scheduler.service';
 import { BackupEncryptionService } from './backup-encryption.service';
 import { BackupCloudStorageService } from './backup-cloud-storage.service';
@@ -29,12 +33,20 @@ import { BackupRecord, BackupSchedule, RecoveryTest } from './entities';
     BackupService,
     BackupSchedulerService,
     BackupRecoveryService,
+    EnhancedBackupService,
+    DisasterRecoveryTestingService,
+    RecoveryVerificationService,
+    BackupGoogleCloudService,
   ],
   exports: [
     BackupService,
     BackupSchedulerService,
     BackupRecoveryService,
     BackupMetricsService,
+    EnhancedBackupService,
+    DisasterRecoveryTestingService,
+    RecoveryVerificationService,
+    BackupGoogleCloudService,
   ],
 })
 export class BackupModule {}
